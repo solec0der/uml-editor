@@ -13,7 +13,7 @@
           </v-list-item-title>
         </v-list-item-content>
         <v-list-item-action>
-          <v-switch v-model="$vuetify.theme.dark" />
+          <v-switch v-model="isDarkModeEnabled" />
         </v-list-item-action>
       </v-list-item>
       <v-divider />
@@ -22,8 +22,30 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Watch } from 'vue-property-decorator'
 
 @Component
-export default class ThemeChangerMenu extends Vue {}
+export default class ThemeChangerMenu extends Vue {
+  private isDarkModeEnabled = false
+  private readonly isDarkModeEnabledKey = 'isDarkModeEnabled'
+
+  mounted() {
+    if (localStorage.getItem(this.isDarkModeEnabledKey) === null) {
+      localStorage.setItem(this.isDarkModeEnabledKey, 'false')
+    }
+
+    this.isDarkModeEnabled =
+      localStorage.getItem(this.isDarkModeEnabledKey) === 'true'
+    this.$vuetify.theme.dark = this.isDarkModeEnabled
+  }
+
+  @Watch('isDarkModeEnabled')
+  onDarkModeToggle() {
+    localStorage.setItem(
+      this.isDarkModeEnabledKey,
+      this.isDarkModeEnabled.toString()
+    )
+    this.$vuetify.theme.dark = this.isDarkModeEnabled
+  }
+}
 </script>

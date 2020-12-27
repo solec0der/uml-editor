@@ -1,15 +1,16 @@
 <template>
   <v-app>
-    <Header />
-    <v-main>
-      <router-view></router-view>
-    </v-main>
+    <Header>
+      <v-main>
+        <router-view></router-view>
+      </v-main>
+    </Header>
   </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Header from '@/components/Header.vue'
+import Header from './components/header/Header.vue'
 
 @Component({
   components: {
@@ -18,3 +19,9 @@ import Header from '@/components/Header.vue'
 })
 export default class App extends Vue {}
 </script>
+
+<style>
+html {
+  overflow: hidden;
+}
+</style>

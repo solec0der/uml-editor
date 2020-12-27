@@ -16,7 +16,6 @@ export default class Element extends Vue {
 
     onDrag(evt: HammerInput) {
         if (!(this.$el instanceof HTMLElement) || this.isResizing) return
-        console.log(this.isResizing)
         if (evt.isFinal) {
             this.x += evt.deltaX
             this.y += evt.deltaY
@@ -29,7 +28,6 @@ export default class Element extends Vue {
     }
     onResize(evt: HammerInput) {
         if (!(this.$el instanceof HTMLElement)) return
-        console.log(evt.isFirst)
         if (evt.isFinal) {
             this.isResizing = false;
             this.width = Math.max(10, this.width + evt.deltaX)

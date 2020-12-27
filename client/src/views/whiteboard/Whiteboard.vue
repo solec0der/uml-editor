@@ -8,8 +8,8 @@
         </v-btn>
         <v-spacer></v-spacer>
       </v-toolbar>
-      <template v-for="child in children">
-        <component :is="child" :key="child.name" />
+      <template v-for="(child, index) in children">
+        <component :is="child" :key="index" />
       </template>
     </v-card>
   </div>

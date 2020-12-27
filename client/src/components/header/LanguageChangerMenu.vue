@@ -39,6 +39,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+
 @Component
 export default class LanguageChangerMenu extends Vue {
   private activeLanguage = 'en-US'
@@ -53,6 +54,7 @@ export default class LanguageChangerMenu extends Vue {
       locale: 'de-CH',
     },
   ]
+
   mounted() {
     if (localStorage.getItem(this.activeLanguageKey) === null) {
       localStorage.setItem(this.activeLanguageKey, 'en-US')
@@ -60,6 +62,7 @@ export default class LanguageChangerMenu extends Vue {
     this.activeLanguage = localStorage.getItem(this.activeLanguageKey) || ''
     this.$i18n.locale = this.activeLanguage
   }
+
   public setLanguage(locale: string) {
     localStorage.setItem(this.activeLanguageKey, locale)
     this.activeLanguage = locale

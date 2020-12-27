@@ -25,9 +25,9 @@
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+              <v-icon>mdi-code-tags</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
+            <v-list-item-title>Code Reverse-Engineering</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -45,7 +45,7 @@ const map: {
   [key: number]: string
 } = {
   0: '/',
-  1: '/example',
+  1: '/code-reverse-engineering',
 }
 
 @Component({

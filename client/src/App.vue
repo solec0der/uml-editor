@@ -24,4 +24,16 @@ export default class App extends Vue {}
 html {
   overflow: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.full-width {
+  width: 100%;
+}
 </style>

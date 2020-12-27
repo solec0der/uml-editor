@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <h1>The most advanced UML Editor, ever.</h1>
-    <p>Built by Andrea and Yannick</p>
+    <h1>{{ $t('HOME.TITLE') }}</h1>
+    <p>{{ $t('HOME.SUBTITLE') }}</p>
   </div>
 </template>
 

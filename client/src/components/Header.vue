@@ -4,6 +4,7 @@
       <v-app-bar-title style="color: white">UML Editor</v-app-bar-title>
     </div>
     <v-spacer></v-spacer>
+    <LanguageChangerMenu />
     <ThemeChangerMenu />
   </v-app-bar>
 </template>
@@ -11,9 +12,11 @@
 <script lang="ts">
 import ThemeChangerMenu from '@/components/ThemeChangerMenu.vue'
 import { Component, Vue } from 'vue-property-decorator'
+import LanguageChangerMenu from '@/components/LanguageChangerMenu.vue'
 
 @Component({
   components: {
+    LanguageChangerMenu,
     ThemeChangerMenu,
   },
 })

@@ -39,7 +39,7 @@
 <script lang="ts">
 import ThemeChangerMenu from './ThemeChangerMenu.vue'
 import { Component, Vue } from 'vue-property-decorator'
-import LanguageChangerMenu from '../LanguageChangerMenu.vue'
+import LanguageChangerMenu from './LanguageChangerMenu.vue'
 
 const map: {
   [key: number]: string

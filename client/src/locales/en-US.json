@@ -6,5 +6,8 @@
   "LANGUAGE_CHANGER": {
     "LANGUAGE_SELECTION": "Language Selection",
     "ACTIVE": "Active"
+  },
+  "WHITEBOARD":{
+    "TITLE": "Whiteboard"
   }
 }

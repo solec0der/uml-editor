@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Header>
-      <v-main>
+      <v-main id="main">
         <router-view></router-view>
       </v-main>
     </Header>
@@ -23,5 +23,8 @@ export default class App extends Vue {}
 <style>
 html {
   overflow: hidden;
+}
+#main {
+  height: 100%;
 }
 </style>

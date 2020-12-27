@@ -4,7 +4,9 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-app-bar-title>UML Editor</v-app-bar-title>
-      <span class="right-elements"><ThemeChangerMenu /></span>
+      <span class="right-elements"
+        ><ThemeChangerMenu /> <LanguageChangerMenu
+      /></span>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -37,6 +39,7 @@
 <script lang="ts">
 import ThemeChangerMenu from './ThemeChangerMenu.vue'
 import { Component, Vue } from 'vue-property-decorator'
+import LanguageChangerMenu from '../LanguageChangerMenu.vue'
 
 const map: {
   [key: number]: string
@@ -47,6 +50,7 @@ const map: {
 
 @Component({
   components: {
+    LanguageChangerMenu,
     ThemeChangerMenu,
   },
 })

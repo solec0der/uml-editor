@@ -39,11 +39,6 @@ div.home {
     margin: auto;
     height: 85%;
     width: 85%;
-    .pink {
-      height: 50px;
-      width: 50px;
-      background-color: pink;
-    }
   }
 }
 </style>
